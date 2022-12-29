@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { onLogout, fetchProtectedInfo } from '../api/auth'
 import { unauthenticateUser } from '../redux/slices/authSlice'
+import { ShoppingCartContext } from '../context/ShoppingCartContext'
 
 
 import logo from '../images/logo.png'
@@ -14,7 +15,7 @@ const Navbar = () => {
     const dispatch = useDispatch()
     const [loading, setLoading] = useState(true)
     const [protectedData, setProtectedData] = useState(null)
-    // const { cart } = useContext(ShoppingCartContext)
+    const { cart } = useContext(ShoppingCartContext)
 
     const signout = async () => {
         try {
@@ -40,9 +41,9 @@ const Navbar = () => {
         }
       }
 
-      // const quantity = cart.reduce((count, product) => {
-      //   return count + product.quantity
-      // }, 0)
+      const quantity = cart.reduce((count, product) => {
+        return count + product.quantity
+      }, 0)
     
       useEffect(() => {
         protectedInfo()
@@ -81,9 +82,9 @@ const Navbar = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                         </svg>
                         <span className="hidden sm:block text-gray-500 text-xs font-semibold">Cart</span>
-                        {/* {quantity > 0 && ( */}
-                            <div className='absolute bg-orange-600 text-black rounded-full h-6 w-6 pl-[0.37rem] translate-x-4 translate-y-11 transform'></div>
-                        
+                        {quantity > 0 && (
+                            <div className='absolute bg-orange-600 text-black rounded-full h-6 w-6 pl-[0.37rem] translate-x-4 translate-y-11 transform'>{quantity}</div>
+                        )}
                         </a>
                         
                     <button type="button" className="w-12 sm:w-20 md:w-24 h-12 sm:h-20 md:h-24 flex lg:hidden flex-col justify-center items-center hover:bg-gray-100 active:bg-gray-200 transition duration-100 gap-1.5">

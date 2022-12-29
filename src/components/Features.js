@@ -16,7 +16,7 @@ const Features = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                         </svg>
                     </div>
-                    <h3 className="text-lg md:text-xl font-semibold text-center mb-2">Growth</h3>
+                    <h3 className="text-lg md:text-xl font-semibold text-center mb-2">Diversity</h3>
                     <p className="text-gray-500 text-center mb-2">Filler text is dummy text which has no meaning however looks very similar to real text.</p>
                     <a href="#" className="text-orange-500 hover:text-orange-600 active:text-orange-700 font-bold transition duration-100">More</a>
                 </div>
@@ -26,7 +26,7 @@ const Features = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                         </svg>
                     </div>
-                    <h3 className="text-lg md:text-xl font-semibold text-center mb-2">Security</h3>
+                    <h3 className="text-lg md:text-xl font-semibold text-center mb-2">24/7 Customer Service</h3>
                     <p className="text-gray-500 text-center mb-2">Filler text is dummy text which has no meaning however looks very similar to real text.</p>
                     <a href="#" className="text-orange-500 hover:text-orange-600 active:text-orange-700 font-bold transition duration-100">More</a>
                 </div>
@@ -36,7 +36,7 @@ const Features = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                         </svg>
                     </div>
-                    <h3 className="text-lg md:text-xl font-semibold text-center mb-2">Cloud</h3>
+                    <h3 className="text-lg md:text-xl font-semibold text-center mb-2">Affordability</h3>
                     <p className="text-gray-500 text-center mb-2">Filler text is dummy text which has no meaning however looks very similar to real text.</p>
                     <a href="#" className="text-orange-500 hover:text-orange-600 active:text-orange-700 font-bold transition duration-100">More</a>
                 </div>

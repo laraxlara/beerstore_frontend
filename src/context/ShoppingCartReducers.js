@@ -3,7 +3,7 @@ export const REMOVE_PRODUCT = "REMOVE_PRODUCT";
 
 const initialState = {cart: []}
 
-export const initializer = (initialValue = initialState) => JSON.parse(localStorage.getItem('localCart')) || initialValue
+// export const initializer = (initialValue = initialState) => JSON.parse(localStorage.getItem('localCart')) || initialValue
 
 const addToCart = (product, state) => {
   const updatedCart = [...state.cart];
