@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { onLogout, fetchProtectedInfo } from '../api/auth'
@@ -10,8 +11,7 @@ import logo from '../images/logo.png'
 
 const Navbar = () => {
     const navigate = useNavigate();
-    const {isAuth} = useSelector(state => state.auth)
-    
+    const {isAuth} = useSelector(state => state.auth)   
     const dispatch = useDispatch()
     const [loading, setLoading] = useState(true)
     const [protectedData, setProtectedData] = useState(null)
@@ -53,15 +53,15 @@ const Navbar = () => {
     <div>
       <header className="border-b mb-8">
             <div className="max-w-screen-2xl flex justify-between items-center px-4 md:px-8 mx-auto">
-                <a href="/" className="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5" aria-label="logo">
+                <Link to="/" className="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5" aria-label="logo">
                     <img src={logo} alt='' style={{ width: '4rem'}} />The Craft Hut
-                </a>
+                </Link>
                 <nav className="hidden lg:flex gap-12 2xl:ml-16">
-                    <a href="/" className="text-gray-600 hover:text-orange-700 text-lg text-lg font-semibold">Home</a>
-                    <a href="/about" className="text-gray-600 hover:text-orange-700 text-lg font-semibold transition duration-100">About</a>
-                    <a href="/beer" className="text-gray-600 hover:text-orange-700 text-lg font-semibold transition duration-100">Beer</a>
-                    <a href="/blog" className="text-gray-600 hover:text-orange-700 text-lg font-semibold transition duration-100">Blog</a>
-                    <a href="/shop" className="text-gray-600 hover:text-orange-700 text-lg font-semibold transition duration-100">Shop</a>
+                    <Link to="/" className="text-gray-600 hover:text-orange-700 text-lg text-lg font-semibold">Home</Link>
+                    <Link to="/about" className="text-gray-600 hover:text-orange-700 text-lg font-semibold transition duration-100">About</Link>
+                    <Link to="/beer" className="text-gray-600 hover:text-orange-700 text-lg font-semibold transition duration-100">Beer</Link>
+                    <Link to="/blog" className="text-gray-600 hover:text-orange-700 text-lg font-semibold transition duration-100">Blog</Link>
+                    <Link to="/shop" className="text-gray-600 hover:text-orange-700 text-lg font-semibold transition duration-100">Shop</Link>
                 </nav>
                 <div className="flex sm:border-l border-r divide-x">
 
@@ -70,14 +70,14 @@ const Navbar = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
                         <span className="hidden sm:block text-gray-500 text-xs font-semibold">Logout</span>
-                    </div>  : <a href="/signin" className="w-12 sm:w-20 md:w-24 h-12 sm:h-20 md:h-24 flex flex-col justify-center items-center hover:bg-gray-100 active:bg-gray-200 transition duration-100 gap-1.5">
+                    </div>  : <Link to="/signin" className="w-12 sm:w-20 md:w-24 h-12 sm:h-20 md:h-24 flex flex-col justify-center items-center hover:bg-gray-100 active:bg-gray-200 transition duration-100 gap-1.5">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                         </svg>
                         <span className="hidden sm:block text-gray-500 text-xs font-semibold">Account</span>
-                    </a>}
+                    </Link>}
 
-                        <a href="/cart" className="w-12 sm:w-20 md:w-24 h-12 sm:h-20 md:h-24 flex flex-col justify-center items-center hover:bg-gray-100 active:bg-gray-200 transition duration-100 gap-1.5">
+                        <Link to="/cart" className="w-12 sm:w-20 md:w-24 h-12 sm:h-20 md:h-24 flex flex-col justify-center items-center hover:bg-gray-100 active:bg-gray-200 transition duration-100 gap-1.5">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                         </svg>
@@ -85,7 +85,7 @@ const Navbar = () => {
                         {quantity > 0 && (
                             <div className='absolute bg-orange-600 text-black rounded-full h-6 w-6 pl-[0.37rem] translate-x-4 translate-y-11 transform'>{quantity}</div>
                         )}
-                        </a>
+                        </Link>
                         
                     <button type="button" className="w-12 sm:w-20 md:w-24 h-12 sm:h-20 md:h-24 flex lg:hidden flex-col justify-center items-center hover:bg-gray-100 active:bg-gray-200 transition duration-100 gap-1.5">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-800" viewBox="0 0 20 20" fill="currentColor">
