@@ -50,7 +50,7 @@ const Navbar = () => {
       }, [])
 
   return (
-    <div>
+    <>
       <header className="border-b mb-8">
             <div className="max-w-screen-2xl flex justify-between items-center px-4 md:px-8 mx-auto">
                 <Link to="/" className="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5" aria-label="logo">
@@ -96,7 +96,7 @@ const Navbar = () => {
                 </div>
             </div>
         </header>
-    </div>
+    </>
   )
 }
 

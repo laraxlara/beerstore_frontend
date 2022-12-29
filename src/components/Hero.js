@@ -14,10 +14,10 @@ const Hero = () => {
           </div>
           <div className="w-full lg:w-2/3 flex mb-12 md:mb-16">
             <div className="bg-gray-100 rounded-lg shadow-lg overflow-hidden relative z-10 top-12 md:top-16 left-12 md:left-16 -ml-12 lg:ml-0">
-              <img src={img1} loading="lazy" alt="Photo by Kaung Htet" className="w-full h-full object-cover object-center" />
+              <img src={img1} loading="lazy" alt="Brewery" className="w-full h-full object-cover object-center" />
             </div>
             <div className="bg-gray-100 rounded-lg shadow-lg overflow-hidden">
-              <img src={img2} loading="lazy" alt="Photo by Manny Moreno" className="w-full h-full object-cover object-center" />
+              <img src={img2} loading="lazy" alt="Beer" className="w-full h-full object-cover object-center" />
             </div>
           </div>
         </div>

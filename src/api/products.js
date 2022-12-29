@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export async function displayProducts(productsData) {
     return await axios.get(
-        'https://thecrafthut-api.onrender.com/api/products',
+        `${process.env.REACT_APP_SERVER_URL}/api/products`,
         productsData
     )
 }

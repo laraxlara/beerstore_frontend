@@ -18,7 +18,6 @@ const Features = () => {
                     </div>
                     <h3 className="text-lg md:text-xl font-semibold text-center mb-2">Diversity</h3>
                     <p className="text-gray-500 text-center mb-2">Filler text is dummy text which has no meaning however looks very similar to real text.</p>
-                    <a href="#" className="text-orange-500 hover:text-orange-600 active:text-orange-700 font-bold transition duration-100">More</a>
                 </div>
                 <div className="flex flex-col items-center">
                     <div className="w-12 md:w-14 h-12 md:h-14 flex justify-center items-center bg-orange-500 text-white rounded-lg md:rounded-xl shadow-lg mb-6">
@@ -28,7 +27,6 @@ const Features = () => {
                     </div>
                     <h3 className="text-lg md:text-xl font-semibold text-center mb-2">24/7 Customer Service</h3>
                     <p className="text-gray-500 text-center mb-2">Filler text is dummy text which has no meaning however looks very similar to real text.</p>
-                    <a href="#" className="text-orange-500 hover:text-orange-600 active:text-orange-700 font-bold transition duration-100">More</a>
                 </div>
                 <div className="flex flex-col items-center">
                     <div className="w-12 md:w-14 h-12 md:h-14 flex justify-center items-center bg-orange-500 text-white rounded-lg md:rounded-xl shadow-lg mb-6">
@@ -38,7 +36,6 @@ const Features = () => {
                     </div>
                     <h3 className="text-lg md:text-xl font-semibold text-center mb-2">Affordability</h3>
                     <p className="text-gray-500 text-center mb-2">Filler text is dummy text which has no meaning however looks very similar to real text.</p>
-                    <a href="#" className="text-orange-500 hover:text-orange-600 active:text-orange-700 font-bold transition duration-100">More</a>
                 </div>
             </div>
         </div>
