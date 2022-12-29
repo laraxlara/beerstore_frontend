@@ -1,4 +1,5 @@
 import React,  { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { onLogin } from '../../api/auth'
 import { useDispatch } from 'react-redux'
 import { authenticateUser } from '../../redux/slices/authSlice'
@@ -52,7 +53,7 @@ const Signin = () => {
               <button type='submit' className="block bg-gray-800 hover:bg-gray-700 active:bg-gray-600 focus-visible:ring ring-gray-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Sign In</button>
             </div>
             <div className="flex justify-center items-center bg-gray-100 p-4">
-              <p className="text-gray-500 text-sm text-center">Don't have an account? <a href="/signup" className="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 transition duration-100">Register</a></p>
+              <p className="text-gray-500 text-sm text-center">Don't have an account? <Link to="/signup" className="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 transition duration-100">Register</Link></p>
             </div>
           </form>
         </div>
