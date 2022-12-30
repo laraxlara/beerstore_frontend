@@ -5,7 +5,7 @@ import ale from '../images/ale.jpg'
 
 const Colections = () => {
   return (
-    <div>
+    <>
       <div className="bg-white py-6 sm:py-8 lg:py-12">
         <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
           <div className="mb-10 md:mb-16">
@@ -30,7 +30,7 @@ const Colections = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import Gallery from '../components/Gallery'
 import Layout from '../components/layout'
 
 import image from '../images/ipa.jpg'
@@ -29,7 +28,6 @@ const About = () => {
                     <p className="text-gray-500 sm:text-lg">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated. It may be used to display a sample of fonts or generate text for testing. Filler text is dummy text which has no meaning however looks very similar to real text.</p>
                 </div>
             </div>
-        <Gallery />
     </Layout>
   )
 }
