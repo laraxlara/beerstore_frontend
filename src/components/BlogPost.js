@@ -6,7 +6,6 @@ import two from '../images/2.jpg'
 const BlogPost = ({link, title}) => {
   return (
     <>
-        <div className="flex flex-col bg-white border rounded-lg overflow-hidden">
             <Link to={link} className="group h-48 md:h-64 block bg-gray-100 overflow-hidden relative">
                 <img src={two} loading="lazy" alt="Blog" className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
             </Link>
@@ -18,7 +17,6 @@ const BlogPost = ({link, title}) => {
                     <span className="text-gray-500 text-sm border rounded px-2 py-1">Read More</span>
                 </div>
             </div>
-        </div>
     </>
   )
 }

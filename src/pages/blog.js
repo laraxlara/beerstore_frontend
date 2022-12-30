@@ -4,8 +4,6 @@ import BlogPost from '../components/BlogPost'
 import { PostsContext } from '../context/PostsContext'
 import axios from 'axios'
 
-import two from '../images/2.jpg'
-
 const Blog = (props) => {
   const { posts, setPosts } = useContext(PostsContext)
 
@@ -33,7 +31,9 @@ const Blog = (props) => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 md:gap-6 xl:gap-8">
           {posts && posts.map((post) => {
             return (
-              <BlogPost link={post.id} title={post.title} />
+              <div key={post.id} className="flex flex-col bg-white border rounded-lg overflow-hidden">
+                <BlogPost link={post.id} title={post.title} />
+              </div>
             )
           })}     
           </div>

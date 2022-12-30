@@ -19,7 +19,9 @@ const Shop = () => {
 
             {products && products.map((product) => {
               return (
-                  <ShopItem key={product.id} name={product.name} price={product.price} onClick={() => { navigate(`/shop/${product.id}`) }} />        
+                <div key={product.id} className='product-display'>
+                  <ShopItem key={product.id} name={product.name} price={product.price} onClick={() => { navigate(`/shop/${product.id}`) }} />
+                </div>      
               )             
             })}
             </div>
