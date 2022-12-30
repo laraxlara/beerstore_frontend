@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import Layout from '../../components/layout'
 import { ProductsContext } from '../../context/ProductsContext'
 
+import imgimg from '../../images/davidnegraPALEALE.jpg'
+
 const Ipa = () => {
     const { products } = useContext(ProductsContext) 
 
@@ -21,7 +23,7 @@ const Ipa = () => {
                         return (
                             <div className="flex flex-col md:flex-row items-center border rounded-lg overflow-hidden">
                                 <Link to="/" className="group w-full md:w-32 lg:w-48 h-48 md:h-full block self-start shrink-0 bg-gray-100 overflow-hidden relative">
-                                    <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Product" className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+                                    <img src={imgimg} loading="lazy" alt="Product" className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
                                 </Link>
                                 <div className="flex flex-col gap-2 p-4 lg:p-6">
                                     <span className="text-gray-400 text-sm">{product.type}</span>
