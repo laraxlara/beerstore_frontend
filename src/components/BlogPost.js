@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import two from '../images/2.jpg'
 
-const BlogPost = (link, title) => {
+const BlogPost = ({link, title}) => {
   return (
     <>
         <div className="flex flex-col bg-white border rounded-lg overflow-hidden">

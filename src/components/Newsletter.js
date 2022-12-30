@@ -4,7 +4,7 @@ import news from '../images/1.jpg'
 
 const Newsletter = () => {
   return (
-    <div>
+    <>
       <div className="bg-white py-6 sm:py-8 lg:py-12">
         <div className="max-w-screen-2xl px-4 md:px-8 mx-auto">
           <div className="flex bg-gray-100 rounded-lg overflow-hidden">
@@ -27,7 +27,7 @@ const Newsletter = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

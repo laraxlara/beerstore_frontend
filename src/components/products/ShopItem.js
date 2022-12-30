@@ -3,7 +3,7 @@ import { formatCurrency } from '../../utilities/formatCurrency'
 
 import img from '../../images/lostlakeIPA.jpg'
 
-const ShopItem = (key, name, price) => {
+const ShopItem = ({key, name, price}) => {
   return (
     <>
         <div key={key} className='product-display'>
