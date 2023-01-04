@@ -11,7 +11,7 @@ const Blog = (props) => {
 
   const getPosts = async () => {
     try {
-      const response = await axios.get(`${REACT_APP_SERVER_URL}/api/posts`)
+      const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/api/posts`)
       setPosts(response.data.posts)
       console.log(response)
     } catch (error) {
