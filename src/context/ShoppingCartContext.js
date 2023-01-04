@@ -17,10 +17,6 @@ export function ShoppingCartProvider(props) {
       dispatch({ type: REMOVE_PRODUCT, productId: productId });
   };
 
-  // useEffect(() => {
-  //   localStorage.setItem('localCart', JSON.stringify(cartState))
-  // }, [cartState])
-
     return (
       <ShoppingCartContext.Provider value={{ products: products, cart: cartState.cart, addToCart: addToCart, removeFromCart: removeFromCart  }}>
           {props.children}

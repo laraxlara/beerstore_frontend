@@ -23,8 +23,8 @@ const Signin = () => {
       await onLogin(values)
       dispach(authenticateUser())
       
-      localStorage.setItem('isAuth', 'true')
-      console.log(localStorage)
+      sessionStorage.setItem('isAuth', 'true')
+      console.log(sessionStorage)
     } catch (error) {
       console.log(error.response.data.errors[0].msg)
       setError(error.response.data.errors[0].msg)

@@ -3,9 +3,9 @@ import { formatCurrency } from '../../utilities/formatCurrency'
 
 import img from '../../images/lostlakeIPA.jpg'
 
-const ShopItem = ({name, price}) => {
+const ShopItem = ({name, price, onClick }) => {
   return (
-    <>
+    <div onClick={onClick}>
         <span className="group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3">
             <img src={img} loading="lazy" alt="Beer Product" className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
         </span>
@@ -15,7 +15,7 @@ const ShopItem = ({name, price}) => {
                 <span className="text-gray-800 lg:text-lg font-bold">{formatCurrency(price)}</span>
             </div>
         </div> 
-    </>
+    </div>
   )
 }
 

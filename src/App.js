@@ -16,6 +16,8 @@ import './styles/App.scss';
 import { ProductsContextProvider } from './context/ProductsContext';
 import { PostsContextProvider } from './context/PostsContext';
 import { ShoppingCartProvider } from './context/ShoppingCartContext'
+import BlogPost from './components/BlogPost';
+import BlogPage from './pages/blogPage';
 
 const PrivateRoutes = () => {
   const {isAuth} = useSelector(state => state.auth)
@@ -39,7 +41,10 @@ function App(props) {
             <Route path='/' exact element={<Home />} />
             <Route path='/about' exact element={<About />} />
             <Route path='/cart' element={<Cart />} />
-            <Route path='/blog' exact element={ <Blog />} />
+            <Route path='/'>
+              <Route path='/blog' exact element={ <Blog />} />
+              <Route path='blog/:name' element={ <BlogPage />} />
+            </Route>
             <Route path='/beer' exact element={<BeerPage />} />
             <Route path='/beer/ipa' exact element={<Ipa />} />
             <Route path='/beer/ale' exact element={<Ale />} />
