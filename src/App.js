@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Navigate, Routes, Route, Outlet } from 'react-router-dom'
+import { HashRouter as Router, Navigate, Routes, Route, Outlet } from 'react-router-dom'
 import Home from './pages/home'
 import About from './pages/about';
 import Shop from './pages/shop'
@@ -19,6 +19,8 @@ import { ShoppingCartProvider } from './context/ShoppingCartContext'
 import BlogPost from './components/BlogPost';
 import BlogPage from './pages/blogPage';
 
+let hashHistory = Router.hashHistory
+
 const PrivateRoutes = () => {
   const {isAuth} = useSelector(state => state.auth)
 
@@ -36,7 +38,7 @@ function App(props) {
     <ProductsContextProvider>
       <ShoppingCartProvider>
         <PostsContextProvider>
-        <Router>
+        <Router history={hashHistory}>
           <Routes>
             <Route path='/' exact element={<Home />} />
             <Route path='/about' exact element={<About />} />
